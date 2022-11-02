@@ -34,23 +34,56 @@ const printBoard = () => {
 
 const horizontalWin = () => {
   // Your code here to check for horizontal wins
+  if ( 'X' === ['X', 'X', 'X'], [' ', ' ', ' '], [' ', ' ', ' ']) {
+    if ('O' === ['X', 'X', 'X'], [' ',' ', ' '], [' ', ' ', ' '])  {
+      return true
+    }
+    return true
+  }
 }
 
 const verticalWin = () => {
   // Your code here to check for vertical wins
+  if ( 'X' === [' ', 'X', ' '], [' ', 'X', ' '], [' ', 'X', ' ']) {
+    if ('O' === [' ', 'X', ' '], [' ','X', ' '], [' ', 'X', ' ']) {
+      return true
+    }
+    return true
+  }
 }
 
 const diagonalWin = () => {
   // Your code here to check for diagonal wins
+  if ( 'X' ===  ['X', ' ', ' '], [' ', 'X', ' '], [' ', ' ', 'X']) {
+    if ('O' === ['X', ' ', ' '], [' ','X', ' '], [' ', ' ', 'X']) {
+      return true
+    }
+    return true
+  }
 }
 
 const checkForWin = () => {
   // Your code here call each of the check for types of wins
+  if(horizontalWin() || verticalWin() || diagonalWin()) {
+    
+    window.alert(`Player ${currentMarker} won!`)
+  } else {
+    // if no win, change the marker from X to O, or O to X for the next player.
+    changeMarker()
+  }
 }
+// checkForWin()
 
 const ticTacToe = (row, column) => {
   // Your code here to place a marker on the board
   // then check for a win
+  board[row][column] - playerTurn;
+    checkForWin()
+  
+    
+    // @TODO, Your code here: use the above information to change the board variable(array of arrays)
+    // HINT: in your browser open up the dev tools -> console
+    // checkForWin()
 }
 
 const getPrompt = () => {
