@@ -52,7 +52,7 @@ const updateBoard = (id) => {
 
   // @TODO, Your code here: use the above information to change the board variable(array of arrays)
   // HINT: in your browser open up the dev tools -> console
-  // checkForWin()
+  checkForWin()
   changeMarker()
 }
 
@@ -60,7 +60,7 @@ const checkForWin = () => {
   // calls each checkForWin possibility and if any are true gives a page alert,
   if(horizontalWin() || verticalWin() || diagonalWin()) {
     // **BONUS** you could make the dismissal of this alert window reset the board...
-    window.alert(`Player ${currentMarker} won!`)
+    window.alert(`Player ${player} won!`)
   } else {
     // if no win, change the marker from X to O, or O to X for the next player.
     // changeMarker()
@@ -72,9 +72,9 @@ const horizontalWin = () => {
   // @TODO, Your code here: to check for horizontal wins
   if ( 'X' === [ ['X', 'X', 'X'], [' ', ' ', ' '], [' ', ' ', ' '] ]) {
     if ('O' === [ ['O', 'O', 'O'], [' ',' ', ' '], [' ', ' ', ' '] ])  {
-      return "horizontalWin"
+      return true
     }
-    return "horizontalWin"
+    return true
   }
   
 }
@@ -84,9 +84,9 @@ const verticalWin = () => {
   // @TODO, Your code here: to check for vertical wins
   if ( 'X' === [ [' ', 'X', ' '], [' ', 'X', ' '], [' ', 'X', ' '] ]) {
     if ('O' === [ [' ', 'O', ' '], [' ','O', ' '], [' ', 'O', ' '] ]) {
-      return "verticalWin"
+      return true
     }
-    return "verticalWin"
+    return true
   }
 }
 
@@ -94,9 +94,9 @@ const diagonalWin = () => {
   // @TODO, Your code here: to check for diagonal wins
   if ( 'X' === [ ['X', ' ', ' '], [' ', 'X', ' '], [' ', ' ', 'X'] ]) {
     if ('O' === [ ['O', ' ', ' '], [' ','O', ' '], [' ', ' ', 'O'] ]) {
-      return "diagonalWin"
+      return true
     }
-    return "diagonalWin"
+    return true
   }
 }
 
@@ -119,6 +119,7 @@ const resetBoard = () => {
   }
   
   // @TODO, Your code here: make sure to reset the array of arrays to empty for a new game
+  
 }
 
 // **BONUSES**

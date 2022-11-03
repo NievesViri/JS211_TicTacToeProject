@@ -69,7 +69,7 @@ const checkForWin = () => {
     window.alert(`Player ${currentMarker} won!`)
   } else {
     // if no win, change the marker from X to O, or O to X for the next player.
-    changeMarker()
+    return false
   }
 }
 // checkForWin()
@@ -77,13 +77,8 @@ const checkForWin = () => {
 const ticTacToe = (row, column) => {
   // Your code here to place a marker on the board
   // then check for a win
-  board[row][column] - playerTurn;
-    checkForWin()
-  
-    
-    // @TODO, Your code here: use the above information to change the board variable(array of arrays)
-    // HINT: in your browser open up the dev tools -> console
-    // checkForWin()
+  board[row][column] = playerTurn;
+  // checkForWin()
 }
 
 const getPrompt = () => {
